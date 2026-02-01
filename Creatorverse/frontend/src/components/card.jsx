@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
@@ -10,10 +11,12 @@ import YouTubeIcon from '@mui/icons-material/YouTube';
 import InstagramIcon from "@mui/icons-material/Instagram";
 import ShareIcon from "@mui/icons-material/Share";
 
-export default function CreatorCard({ name, description, image }) {
+export default function CreatorCard({ id, name, description, image }) {
+  const navigate = useNavigate();
+
   return (
     <Card sx={{ maxWidth: 345 }}>
-      <CardActionArea>
+      <CardActionArea onClick={() => navigate(`/view/${id}`)}>
         <CardMedia
           component="img"
           height="140"
