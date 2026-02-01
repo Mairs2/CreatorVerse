@@ -9,10 +9,16 @@ import CardActions from "@mui/material/CardActions";
 import XIcon from "@mui/icons-material/X";
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import InstagramIcon from "@mui/icons-material/Instagram";
-import ShareIcon from "@mui/icons-material/Share";
 
-export default function CreatorCard({ id, name, description, image }) {
+export default function CreatorCard({ id, name, description, image, instagram, twitter, youtube }) {
   const navigate = useNavigate();
+
+  const handleSocialClick = (e, url) => {
+    e.stopPropagation();
+    if (url) {
+      window.open(url, "_blank", "noopener,noreferrer");
+    }
+  };
 
   return (
     <Card sx={{ maxWidth: 345 }}>
@@ -33,14 +39,33 @@ export default function CreatorCard({ id, name, description, image }) {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary" startIcon={<ShareIcon />}/>
-        
-        <Button size="large" color="primary" startIcon={<InstagramIcon />}/>
-         
-        <Button size="small" color="primary" startIcon={<XIcon />}/>
+        {instagram && (
+          <Button
+            size="large"
+            color="primary"
+            startIcon={<InstagramIcon />}
+            onClick={(e) => handleSocialClick(e, instagram)}
+          />
+        )}
 
-        <Button size="large" color="primary" startIcon={<YouTubeIcon/>}/>
-         
+        {twitter && (
+          <Button
+            size="small"
+            color="primary"
+            startIcon={<XIcon />}
+            onClick={(e) => handleSocialClick(e, twitter)}
+          />
+        )}
+
+        {youtube && (
+          <Button
+            size="large"
+            color="primary"
+            startIcon={<YouTubeIcon/>}
+            onClick={(e) => handleSocialClick(e, youtube)}
+          />
+        )}
+
       </CardActions>
     </Card>
   );
