@@ -8,6 +8,7 @@ import Alert from "@mui/material/Alert";
 import AddIcon from "@mui/icons-material/Add";
 import CreatorCard from "../components/card";
 import { supabase } from "../client";
+import Footer from "../components/Footer";
 
 const ShowCreators = () => {
   const navigate = useNavigate();
@@ -94,6 +95,7 @@ const ShowCreators = () => {
           ))}
         </Box>
       )}
+      <Footer />
     </Box>
   );
 };
