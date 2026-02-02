@@ -35,10 +35,11 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented required features:
 
-👉🏿<img src='https://youtu.be/YXg3CnFZR30' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<!-- <img src='' title='Video Walkthrough' width='' alt='Video Walkthrough' /> -->
+https://youtu.be/YXg3CnFZR30
 
 <!-- Replace this with whatever GIF tool you used! -->
-GIF created with ...  Camo Studio
+GIF created with ... N/A
 <!-- Recommended tools:
 [Kap](https://getkap.co/) for macOS
 [ScreenToGif](https://www.screentogif.com/) for Windows
